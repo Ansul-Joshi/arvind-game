@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        h6 {
+            color: #666;
+        }
+
+        h4 {
+            color: #666;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #replace {
+            width: 300px;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>Try this arvind bhaiya test</h1>
+    <h6>test 2</h6>
+    <img src="img3.jpeg" width="300" id="replace">
+    <h4 id="padle">reels dek raha hai ??</h4>
+    <button type="button" onclick="pass()">Haan</button>
+    <button type="button" onclick="angry()">naah</button>
+    <script>
+        function angry(){
+            document.getElementById("replace").src = "img2.jpeg";
+            document.getElementById("padle").innerHTML="shabash !!! , gharwalo ka naam roshan karega :) ";
+            setTimeout(() => {
+                var a = confirm("Do you want to go to the next level?");
+                if(a){
+                    window.location.href = "level3.html";
+                } else {
+                    window.close();
+                }
+            }, 3000); 
+        }
+
+        function pass(){
+            document.getElementById("replace").src = "img5.jpeg"; 
+            document.getElementById("padle").innerHTML="padhle bete varna chip activate kar dunga ";
+        }
+    </script>
+</body>
+</html>
